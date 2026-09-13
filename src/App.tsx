@@ -17,11 +17,11 @@ function App() {
 
   return (
     <>
-    <Suspense fallback={<p>Loading...</p>}>
-      <Technologies technologiesDataPromise={technologiesDataPromise()}></Technologies>
-    </Suspense>
      <Nav></Nav>
      <Hero></Hero>
+     <Suspense fallback={<p className="p-15 mt-5">Loading...</p>}>
+      <Technologies technologiesDataPromise={technologiesDataPromise()}></Technologies>
+    </Suspense>
      <Footer></Footer>
     </>
   )
