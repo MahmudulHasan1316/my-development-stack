@@ -3,7 +3,7 @@ import Logo from "../assets/logo-text.png";
 
 export default function Nav() {
   return (
-    <div className="border-b border-gray-100">
+    <div className="sticky top-0 z-50 border-b border-gray-100 bg-white">
       <nav className="flex justify-between gap-4 items-center py-4 container mx-auto">
         <img src={Logo} alt="Logo Text" className="w-28 sm:w-32 md:w-36" />
 
