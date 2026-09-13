@@ -4,6 +4,7 @@ import Hero from "./Components/hero"
 import Nav from "./Components/Nav"
 import Technologies from "./TechComponents/Technologies";
 import type { TechnologyType } from "./TechComponents/TechnologyType";
+import { ToastContainer } from "react-toastify";
 
 
 const technologiesDataPromise = async () : Promise<TechnologyType[]> => {
@@ -23,6 +24,7 @@ function App() {
       <Technologies technologiesDataPromise={technologiesDataPromise()}></Technologies>
     </Suspense>
      <Footer></Footer>
+     <ToastContainer />
     </>
   )
 }

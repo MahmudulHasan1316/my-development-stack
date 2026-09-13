@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { TechnologyType } from "./TechnologyType";
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
+import { toast } from "react-toastify";
 
 export interface TechnologiesProps {
   technologiesDataPromise: Promise<TechnologyType[]>;
@@ -12,7 +13,7 @@ export default function Technologies({
 }: TechnologiesProps) {
   const technologies = use(technologiesDataPromise);
 
-  // Stores the technologies added to the stack
+ 
   const [selectedTechnologies, setSelectedTechnologies] = useState<
     TechnologyType[]
   >([]);
@@ -25,7 +26,7 @@ export default function Technologies({
         (item) => item.id === technology.id
       )
     ) {
-      alert("This technology is already in your stack!");
+      toast.warning("This technology is already in your stack!");
       return;
     }
 
